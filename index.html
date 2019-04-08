@@ -2,11 +2,48 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title of the document</title>
+<title>Log in activity</title>
 </head>
 
 <body>
-Content of the document......
+<H1 align="center">
+<span> Log In </span>
+</br>
+<input type="text" id="us">
+</br>
+<input type="password" id="ps">
+</br>
+<input type="button" id="bt" value="Log In">
+</br>
+<span id="ans"></span>
+</H1>
+<script>
+var user = document.getElementById("us");
+var pass = document.getElementById("ps");
+var answer = document.getElementById("ans");
+var bt = document.getElementById("bt");
+
+bt.addEventListener('click', interact);
+
+
+function interact(){
+if (user.value == pass.value){
+	answer.innerHTML = "Ingresaste correctamente";
+	user.value = "";
+	pass.value = "";
+} else {
+	answer.innerHTML = "Error";
+	user.value = "";
+	pass.value = "";
+}
+}
+
+
+</script>
+
 </body>
 
 </html>
+
+
+
